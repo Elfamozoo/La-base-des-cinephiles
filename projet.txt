@@ -1,0 +1,22 @@
+- Partir sur ses idées tout d'abord : structures du site, pensé au fonctionnalité du site.
+
+- Site qui permets de consulter les differents films, series et acteurs
+
+- utilisation de API TMDB afin d'utiliser leur base de données
+
+- utilisation de Figma pour le maquettage
+
+- Rendre le site ergonomique et jolie
+
+- Avoir 2 page d'accueil pour le site avec 2 chartes graphiques differentes
+
+- Utilisateur puissent se connecter au site ( Login username + mdp ) ( A voir si utilité )
+
+- Avoir 3-4 pages minimum ( Home, Films, Series, Acteurs ) + si idées
+
+- Utilisation du PHP JS HTML/CSS ( framework possible ) au vu des demandes.
+
+- Rendre le site responsive si possible
+
+- Recherché sur internet pour la partie technique et les problemes
+

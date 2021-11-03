@@ -1,0 +1,7 @@
+-- Voir ce lien pour trouver une alternative a innerHTML (https://stackoverflow.com/questions/11515383/why-is-element-innerhtml-bad-code)
+
+
+-- Les categories des films sont en Anglais malgré que je l'ai mise en FR (API google Trad ?)
+
+
+-- 
