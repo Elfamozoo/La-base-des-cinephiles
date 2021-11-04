@@ -4,4 +4,7 @@
 -- Les categories des films sont en Anglais malgré que je l'ai mise en FR (API google Trad ?)
 
 
--- 
+-- Node JS installé et live server fonctionnel 
+
+
+-- L'api des details des films ne fonctionne pas a regler avant de continuer le projet
