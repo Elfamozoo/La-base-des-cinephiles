@@ -90,6 +90,25 @@ fetch(`${movie_detail_http}${movie_id}/videos?` + new URLSearchParams({
                 allowfullscreen></iframe>
             `;
         }
+    })
 
+
+fetch(`${movie_detail_http}${movie_id}/recommendations?` + new URLSearchParams({
+        api_key: api_key
+    }))
+    .then(res => res.json())
+    .then(recommendations => {
+        let recommendationsContainer = document.querySelector('.recommendations-container');
+        for (let i = 0; i < 16; i++) {
+            if (recommendations.results[i].backdrop_path == null) {
+                i++;
+            }
+            recommendationsContainer.innerHTML += `
+                    <div class="film" onclick="location.href = '/${recommendations.results[i].id}'">
+                    <img src="${img_url}${recommendations.results[i].backdrop_path}" alt="">
+                    <p class="film-titre">${recommendations.results[i].title}</p>
+            
+            `
+        }
 
     })
