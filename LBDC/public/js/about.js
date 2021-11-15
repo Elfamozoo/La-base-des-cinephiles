@@ -112,3 +112,11 @@ fetch(`${movie_detail_http}${movie_id}/recommendations?` + new URLSearchParams({
         }
 
     })
+
+
+
+    // Button precedent
+
+    document.getElementById('go-back').addEventListener('click', () => {
+        history.back();
+      });

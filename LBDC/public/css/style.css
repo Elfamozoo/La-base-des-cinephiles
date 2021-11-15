@@ -195,3 +195,28 @@ body {
 .nxt-btn:hover {
     opacity: 1;
 }
+
+
+.back-btn {
+    position: absolute;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2vw;
+    background: #000;
+    border: none;
+    outline: none;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.back-btn .fas {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.back-btn{
+    left: 1vw;
+    top: 1.5vw;
+}
