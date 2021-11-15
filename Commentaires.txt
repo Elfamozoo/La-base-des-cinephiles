@@ -2,6 +2,8 @@
 
 
 -- Les categories des films sont en Anglais malgré que je l'ai mise en FR (API google Trad ?)
+https://www.themoviedb.org/talk/5e9b6a7e076ce800242d09d8
+https://www.themoviedb.org/talk/57c13ec8925141150000595c
 
 
 -- Node JS installé et live server fonctionnel 

@@ -14,3 +14,4 @@ const movie_detail_http = "https://api.themoviedb.org/3/movie"
 
 // const movie_detail_http = "https://api.themoviedb.org/3/movie?api_key=a42944988ef08836553202a6f37bf004&language=fr-FR"
 
+// https://api.themoviedb.org/3/movie/550?api_key=a42944988ef08836553202a6f37bf004&language=fr-FR
