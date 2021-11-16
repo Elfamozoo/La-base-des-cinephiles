@@ -1,15 +1,15 @@
 const main = document.querySelector('.main');
-// C'est mon pass sanitaire ( chaque requete je monte ma key)
+// C'est mon pass sanitaire ( chaque requete je monte ma key).
 fetch(genres_list_http + new URLSearchParams({
         api_key: api_key
     }))
-    // Je recupere ma promesse puis je formate mes données en .json
+    // Je recupere ma promesse puis je formate mes données en .json.
     .then(res => res.json())
-    // Comme le .json renvoi une promesse j'utilise de nouveau le .then et je renomme comme je souhaite mes données
+    // Comme le .json renvoi une promesse j'utilise de nouveau le .then et je renomme comme je souhaite mes données.
     .then(data => {
-        // A l'interieur de mes données (data) je vais chercher mes genres(Array [object])
+        // A l'interieur de mes données (data) je vais chercher mes genres(Array [object]).
         data.genres.forEach(genre => {
-            // Je nomme ma variable "genre" et j'execute la fonction "fetchMoviesListByGenre"
+            // Je nomme ma variable "genre" et j'execute la fonction "fetchMoviesListByGenre".
             fetchMoviesListByGenre(genre.id, genre.name);
         })
     });
@@ -24,14 +24,14 @@ const fetchMoviesListByGenre = (id, genre) => {
         // Le .then decortique la promesse envoyé par le fetch et recupere la reponse puis la formate en json.
         .then(res => res.json())
         .then(discover => {
-        //   A l'interieur de discover je cible ce dont j'ai besoin en l'occurence le results (voir API) 
+        //   A l'interieur de discover je cible ce dont j'ai besoin en l'occurence le results (voir API).
             makeCategoryElement(genre, discover.results)
         })
         .catch(err => console.log(err));
 }
 
-// TODO: Voir ce lien pour trouver une alternative a innerHTML (https://stackoverflow.com/questions/11515383/why-is-element-innerhtml-bad-code)
-// TODO: Faire un nouveau .js afin de separé mon code afin qu'il soit plus claire
+// TODO: Voir ce lien pour trouver une alternative a innerHTML (https://stackoverflow.com/questions/11515383/why-is-element-innerhtml-bad-code).
+// TODO: Faire un nouveau .js afin de separé mon code afin qu'il soit plus claire.
 const makeCategoryElement = (category, image) => {
     main.innerHTML += `
     <div class="film-liste">
@@ -50,13 +50,13 @@ const makeCategoryElement = (category, image) => {
 
 }
 
-// On attribue la fonction qui a comme argument(id,data)
+// On attribue la fonction qui a comme argument(id,data).
 const makeCard = (id, image) => {
     const movieContainer = document.getElementById(id);
     image.forEach((card, i) => {
-        // backdrop_path est un object string qui permets de recuperer les images des films
+        // backdrop_path est un object string qui permets de recuperer les images des films.
         if (card.backdrop_path == null) {
-            // poster_path est un object string qui permets de recuperer les posters des films
+            // poster_path est un object string qui permets de recuperer les posters des films.
             card.backdrop_path = card.poster_path
             if (card.backdrop_path == null) {
                 return;

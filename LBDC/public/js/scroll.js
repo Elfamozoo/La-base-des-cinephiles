@@ -5,7 +5,7 @@ const setupScrolling = () => {
 
 
     container.forEach((scroll, i) => {
-        // Le getBoundingClientRect permet de retourner les dimensions du container
+        // Le getBoundingClientRect permet de retourner les dimensions du container.
         let containerDimensions = scroll.getBoundingClientRect();
         let containerWidth = containerDimensions.width;
 

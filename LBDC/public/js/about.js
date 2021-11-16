@@ -44,13 +44,13 @@ const setupMovieInfo = (detail) => {
 
     backdrop.style.backgroundImage = `url(${original_img_url}${detail.backdrop_path})`;
 
-
+    // Ajout des notes pour chaque film en appelant l'objet vote_average.
     note.innerHTML = detail.vote_average;
 
 
 }
 
-// Fonction qui permets d'espacer les genres
+// Fonction qui permets d'espacer les genres.
 const formatString = (currentIndex, maxIndex) => {
     // Si le genre actuel n'est pas le dernier alors cela retourne "," sinon si c'est le dernier cela ne fait rien.
     return (currentIndex == maxIndex - 1) ? '' : ', ';
@@ -58,7 +58,7 @@ const formatString = (currentIndex, maxIndex) => {
 
 
 
-// Fetch le casting
+// Fetch le casting.
 
 fetch(`${movie_detail_http}${movie_id}/credits?` + new URLSearchParams({
         api_key: api_key
@@ -75,7 +75,7 @@ fetch(`${movie_detail_http}${movie_id}/credits?` + new URLSearchParams({
 
 
 
-// Fetch les trailers
+// Fetch les trailers.
 
 fetch(`${movie_detail_http}${movie_id}/videos?` + new URLSearchParams({
         api_key: api_key
@@ -119,7 +119,7 @@ fetch(`${movie_detail_http}${movie_id}/recommendations?` + new URLSearchParams({
 
 
 
-    // Button precedent afin de revenir a l'accueil
+    // Button precedent afin de revenir a l'accueil.    
 
     document.getElementById('go-back').addEventListener('click', () => {
         document.location.href = 'http://localhost:3000/'
