@@ -17,6 +17,7 @@ fetch(`${movie_detail_http}${movie_id}?` + new URLSearchParams({
 const setupMovieInfo = (detail) => {
     const movieName = document.querySelector('.film-nom');
     const genre = document.querySelector('.genre');
+    const note = document.querySelector('.note');
     const description = document.querySelector('.description');
     const title = document.querySelector('title');
     const backdrop = document.querySelector('.film-info');
@@ -42,6 +43,9 @@ const setupMovieInfo = (detail) => {
     description.innerHTML = detail.overview.substring(0, 200) + '...';
 
     backdrop.style.backgroundImage = `url(${original_img_url}${detail.backdrop_path})`;
+
+
+    note.innerHTML = detail.vote_average;
 
 
 }
