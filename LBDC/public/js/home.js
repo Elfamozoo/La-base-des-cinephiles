@@ -24,7 +24,7 @@ const fetchMoviesListByGenre = (id, genre) => {
         // Le .then decortique la promesse envoyé par le fetch et recupere la reponse puis la formate en json.
         .then(res => res.json())
         .then(discover => {
-        //   A l'interieur de discover je cible ce dont j'ai besoin en l'occurence le results (voir API).
+            //   A l'interieur de discover je cible ce dont j'ai besoin en l'occurence le results (voir API).
             makeCategoryElement(genre, discover.results)
         })
         .catch(err => console.log(err));
@@ -78,3 +78,17 @@ const makeCard = (id, image) => {
 
     })
 }
+
+
+
+
+fetch(translation_url + new URLSearchParams({
+        api_key: api_key
+    }))
+    .then(res => res.json())
+    .then(trad => {
+            // trad.array[object].forEach(traduction => {
+                // fetchPrimaryTranslation(traduction.iso_639_1, traduction.name);
+                console.log(trad)
+            // })
+        });
