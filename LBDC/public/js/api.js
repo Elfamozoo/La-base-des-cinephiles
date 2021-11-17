@@ -4,7 +4,7 @@ const img_url = "https://image.tmdb.org/t/p/w500/"
 
 const original_img_url = "https://image.tmdb.org/t/p/original"
 
-const translation_url = "https://api.themoviedb.org/3/configuration/languages?api_key=a42944988ef08836553202a6f37bf004"
+const translation_url = "https://api.themoviedb.org/3/configuration/primary_translations?api_key=a42944988ef08836553202a6f37bf004"
 
 const base_uri = "https://api.themoviedb.org/3/"
 
