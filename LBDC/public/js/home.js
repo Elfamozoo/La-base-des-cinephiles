@@ -1,4 +1,7 @@
 const main = document.querySelector('.main');
+const search = document.querySelector('.search-text');
+const form = document.getElementById('form');
+
 // C'est mon pass sanitaire ( chaque requete je monte ma key).
 fetch(genres_list_http + new URLSearchParams({
         api_key: api_key
@@ -82,13 +85,32 @@ const makeCard = (id, image) => {
 
 
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const searchTerm = search.value;
+
+    if (searchTerm) {
+        makeCard(search_url + '&query=' + searchTerm)
+    }
+    else {
+        makeCard(movie_genres_http)
+    }
+})
+
+
+
+
+
+
+
 fetch(translation_url + new URLSearchParams({
         api_key: api_key
     }))
     .then(res => res.json())
     .then(trad => {
-            // trad.array[object].forEach(traduction => {
-                // fetchPrimaryTranslation(traduction.iso_639_1, traduction.name);
-                console.log(trad)
-            // })
-        });
+        // trad.array[object].forEach(traduction => {
+        // fetchPrimaryTranslation(traduction.iso_639_1, traduction.name);
+        console.log(trad)
+        // })
+    });
