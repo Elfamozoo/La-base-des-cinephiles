@@ -113,7 +113,8 @@ body {
 
 .lang-menu ul li a::before {
     content: '';
-    display: inline-block;
+    /* Place pour drapeau au besoin */
+    /* display: inline-block; */
     width: 32px;
     height: 32px;
     margin-right: 10px;
