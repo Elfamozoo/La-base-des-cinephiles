@@ -101,7 +101,7 @@ form.addEventListener('submit', (e) => {
 
 
 
-
+// Traduction
 
 
 fetch(translation_url + new URLSearchParams({
@@ -109,8 +109,7 @@ fetch(translation_url + new URLSearchParams({
     }))
     .then(res => res.json())
     .then(trad => {
-        // trad.array[object].forEach(traduction => {
-        // fetchPrimaryTranslation(traduction.iso_639_1, traduction.name);
+        fetchPrimaryTranslation(traduction.iso_639_1, traduction.name);
         console.log(trad)
         // })
     });

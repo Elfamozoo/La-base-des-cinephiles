@@ -70,6 +70,61 @@ body {
     border-color: red;
 }
 
+/* Selection langue  */
+
+
+.selected-lang {
+    cursor: pointer;
+    color: #fff;
+    padding-right: 40px;
+    line-height: 2;
+}
+
+.selected-lang:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.lang-menu ul li {
+    list-style: none;
+}
+
+
+.lang-menu ul li a {
+    width: 140px;
+    display: block;
+    padding: 5px 10px;
+}
+
+.lang-menu ul li a:hover {
+    background-color: #f2f2f2;
+}
+
+.lang-menu ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+.lang-menu:hover ul {
+    display: block;
+}
 
 .search-container {
     padding-right: 40px;
