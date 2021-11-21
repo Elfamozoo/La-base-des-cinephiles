@@ -11,3 +11,14 @@ https://developers.themoviedb.org/3/movies/get-movie-translations
 
 
 -- L'api des details des films ne fonctionne pas a regler avant de continuer le projet
+
+
+Barre de recherche :
+
+Faire une barre de recherche afin de pouvoir retrouver les films desirés.
+
+
+Pour la traduction : 
+
+Je veux un button en haut a gauche de mon site ( sur la page principal ) qui me permets de changer de langue le site.
+En utilisant l'api de TMDB je pens que cela est possible mais pas evident.

@@ -1,4 +1,7 @@
 const main = document.querySelector('.main');
+const search = document.querySelector('.search-text');
+const form = document.getElementById('form');
+
 // C'est mon pass sanitaire ( chaque requete je monte ma key).
 fetch(genres_list_http + new URLSearchParams({
         api_key: api_key
@@ -24,7 +27,7 @@ const fetchMoviesListByGenre = (id, genre) => {
         // Le .then decortique la promesse envoyé par le fetch et recupere la reponse puis la formate en json.
         .then(res => res.json())
         .then(discover => {
-        //   A l'interieur de discover je cible ce dont j'ai besoin en l'occurence le results (voir API).
+            //   A l'interieur de discover je cible ce dont j'ai besoin en l'occurence le results (voir API).
             makeCategoryElement(genre, discover.results)
         })
         .catch(err => console.log(err));
@@ -78,3 +81,35 @@ const makeCard = (id, image) => {
 
     })
 }
+
+
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const searchTerm = search.value;
+
+    if (searchTerm) {
+        makeCard(search_url + '&query=' + searchTerm)
+    }
+    else {
+        makeCard(movie_genres_http)
+    }
+})
+
+
+
+
+// Traduction
+
+
+fetch(translation_url + new URLSearchParams({
+        api_key: api_key
+    }))
+    .then(res => res.json())
+    .then(trad => {
+        fetchPrimaryTranslation(traduction.iso_639_1, traduction.name);
+        console.log(trad)
+        // })
+    });
