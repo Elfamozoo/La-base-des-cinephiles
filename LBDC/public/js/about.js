@@ -6,7 +6,8 @@ console.log(movie_id);
 // Fetch des details des films.
 
 fetch(`${movie_detail_http}${movie_id}?` + new URLSearchParams({
-        api_key: api_key
+        api_key: api_key,
+        language: langue
     }))
 
     .then(res => res.json())
@@ -61,7 +62,8 @@ const formatString = (currentIndex, maxIndex) => {
 // Fetch le casting.
 
 fetch(`${movie_detail_http}${movie_id}/credits?` + new URLSearchParams({
-        api_key: api_key
+        api_key: api_key,
+        language: langue
     }))
     .then(res => res.json())
     .then(cast => {
@@ -78,7 +80,8 @@ fetch(`${movie_detail_http}${movie_id}/credits?` + new URLSearchParams({
 // Fetch les trailers.
 
 fetch(`${movie_detail_http}${movie_id}/videos?` + new URLSearchParams({
-        api_key: api_key
+        api_key: api_key,
+        language: langue
     }))
     .then(res => res.json())
     .then(trailer => {
@@ -98,7 +101,8 @@ fetch(`${movie_detail_http}${movie_id}/videos?` + new URLSearchParams({
 
 
 fetch(`${movie_detail_http}${movie_id}/recommendations?` + new URLSearchParams({
-        api_key: api_key
+        api_key: api_key,
+        language: langue
     }))
     .then(res => res.json())
     .then(recommendations => {

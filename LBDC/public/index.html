@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/api.js" defer></script>
     <script src="js/scroll.js" defer></script>
+    <script src="js/langue.js" defer></script>
     <script src="js/home.js" defer></script>
 </head>
 
@@ -21,26 +22,18 @@
         <div class="join-box">
             <div class="search-container">
                 <form id="form">
-                    <input type="text" class="search-text" placeholder="Search.." name="search">
+                    <input type="text" class="search-text" placeholder="Rechercher" name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
             <div class="lang-menu">
-                <div class="selected-lang">
-                    French
+                <button class="click">Langue</button>
+                <div class="list-lang">
+                    <button onclick="language('fr-FR')" class="links">French</button>
+                    <button onclick="language('en-US')" class="links">English</button>
+                    <button onclick="language('de-DE')" class="links">German</button>
+                    <button onclick="language('ar-SA')" class="links">Arabic</button>
                 </div>
-                <ul>
-                    <li>
-                        <a>English</a>
-                    </li>
-                    <li>
-                        <a>German</a>
-                    </li>
-                    <li>
-                        <a>Arabic</a>
-                    </li>
-
-                </ul>
             </div>
             <p class="join-msg">Profitez de resumés complets de vos films et series</p>
             <button class="btn join-btn">Rejoignez nous !</button>

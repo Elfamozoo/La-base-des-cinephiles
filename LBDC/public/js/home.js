@@ -4,7 +4,9 @@ const form = document.getElementById('form');
 
 // C'est mon pass sanitaire ( chaque requete je monte ma key).
 fetch(genres_list_http + new URLSearchParams({
-        api_key: api_key
+        api_key: api_key,
+        // ici assigne la variable global langue au language de mon lien api afin d'avoir la langue desiré par l'utilisateur.
+        language: langue,
     }))
     // Je recupere ma promesse puis je formate mes données en .json.
     .then(res => res.json())
@@ -21,6 +23,7 @@ fetch(genres_list_http + new URLSearchParams({
 const fetchMoviesListByGenre = (id, genre) => {
     fetch(movie_genres_http + new URLSearchParams({
             api_key: api_key,
+            language: langue,
             with_genres: id,
             page: ""
         }))
@@ -81,35 +84,3 @@ const makeCard = (id, image) => {
 
     })
 }
-
-
-
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const searchTerm = search.value;
-
-    if (searchTerm) {
-        makeCard(search_url + '&query=' + searchTerm)
-    }
-    else {
-        makeCard(movie_genres_http)
-    }
-})
-
-
-
-
-// Traduction
-
-
-fetch(translation_url + new URLSearchParams({
-        api_key: api_key
-    }))
-    .then(res => res.json())
-    .then(trad => {
-        fetchPrimaryTranslation(traduction.iso_639_1, traduction.name);
-        console.log(trad)
-        // })
-    });
