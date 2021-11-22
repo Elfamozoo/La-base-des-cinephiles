@@ -1,3 +1,6 @@
+const form = document.getElementById('form')
+
+
 fetch(search_url + new URLSearchParams({
             api_key: api_key,
             language: langue,
