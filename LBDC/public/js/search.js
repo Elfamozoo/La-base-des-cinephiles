@@ -3,7 +3,7 @@ fetch(search_url + new URLSearchParams({
             language: langue,
             page: 1,
             include_adult: true,
-        });
+        }));
 
 
         form.addEventListener('submit', (e) => {})
