@@ -1,24 +1,33 @@
 -- Voir ce lien pour trouver une alternative a innerHTML (https://stackoverflow.com/questions/11515383/why-is-element-innerhtml-bad-code)
 
 
--- Les categories des films sont en Anglais malgré que je l'ai mise en FR (API google Trad ?)
-https://www.themoviedb.org/talk/5e9b6a7e076ce800242d09d8
-https://www.themoviedb.org/talk/57c13ec8925141150000595c
-https://developers.themoviedb.org/3/movies/get-movie-translations
+
+-- Node JS installé et live server fonctionnel. FAIT
 
 
--- Node JS installé et live server fonctionnel 
-
-
--- L'api des details des films ne fonctionne pas a regler avant de continuer le projet
+-- L'api des details des films ne fonctionne pas a regler avant de continuer le projet. FAIT
 
 
 Barre de recherche :
 
-Faire une barre de recherche afin de pouvoir retrouver les films desirés.
+Faire une barre de recherche afin de pouvoir retrouver les films desirés. faire que cela renvoi le resultat sur une nouvelle page.
+
+Comment faire :
+
+Tout d'abord creer une barre de recherche fonctionnel en HTML sur les pages souhaités. FAIT
+
+Si je souhaite que cela m'emmene vers une autre page il faut que mon button "search" m'envoie sur la dit page. FAIT
+
+Trouver le bon inpoint (lien vers api). FAIT
+
+Creer un path vers ma page results.hmtl.
+
+Vers le lien entre ma barre de recherche et mon api.
+
+Les resultats des recherches doivent renvoyer vers les details des films dans l'ideal.
 
 
 Pour la traduction : 
 
 Je veux un button en haut a gauche de mon site ( sur la page principal ) qui me permets de changer de langue le site.
-En utilisant l'api de TMDB je pens que cela est possible mais pas evident.
+En utilisant l'api de TMDB je pense que cela est possible mais pas evident. FAIT
