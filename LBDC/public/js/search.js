@@ -9,4 +9,4 @@ fetch(search_url + new URLSearchParams({
         }));
 
 
-        form.addEventListener('submit', (e) => {})
+        form.addEventListener('submit', () => {})
