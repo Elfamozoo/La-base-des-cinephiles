@@ -6,7 +6,7 @@ const original_img_url = "https://image.tmdb.org/t/p/original"
 
 const translation_url = "https://api.themoviedb.org/3/configuration/languages?"
 
-const search_url = "https://api.themoviedb.org/3/search/movie"
+const search_url = "https://api.themoviedb.org/3/search/movie?"
 
 const base_uri = "https://api.themoviedb.org/3/"
 

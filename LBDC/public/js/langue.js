@@ -44,3 +44,10 @@ click.addEventListener("click", () => {
     list.classList.toggle('newlist-lang');
 
 });
+
+
+// Button precedent afin de revenir a l'accueil.    
+
+document.getElementById('go-back').addEventListener('click', () => {
+    document.location.href = 'http://localhost:3000/'
+});

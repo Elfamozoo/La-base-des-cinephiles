@@ -1,6 +1,6 @@
 const main = document.querySelector('.main');
 const search = document.querySelector('.search-text');
-const form = document.getElementById('form');
+
 
 // C'est mon pass sanitaire ( chaque requete je monte ma key).
 fetch(genres_list_http + new URLSearchParams({

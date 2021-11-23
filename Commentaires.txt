@@ -22,7 +22,9 @@ Trouver le bon inpoint (lien vers api). FAIT
 
 Creer un path vers ma page results.hmtl.
 
-Vers le lien entre ma barre de recherche et mon api.
+Vers le lien entre ma barre de recherche et mon api.(https://www.themoviedb.org/talk/57c450299251416c04004704)
+
+D'apres moi ce que j'ecris dans ma barre de recherche doit se retoruver dans mon api dans la section "query=".
 
 Les resultats des recherches doivent renvoyer vers les details des films dans l'ideal.
 
