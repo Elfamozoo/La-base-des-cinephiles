@@ -1,10 +1,10 @@
-const form = document.getElementById('form')
-
+const form = document.getElementById('form');
+const query = "";
 
 fetch(search_url + new URLSearchParams({
     api_key: api_key,
     language: langue,
-    query: "",
+    query: query,
     page: 1,
     include_adult: true,
 }));

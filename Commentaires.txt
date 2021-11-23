@@ -18,7 +18,7 @@ Tout d'abord creer une barre de recherche fonctionnel en HTML sur les pages souh
 
 Si je souhaite que cela m'emmene vers une autre page il faut que mon button "search" m'envoie sur la dit page. FAIT
 
-Trouver le bon inpoint (lien vers api). FAIT
+Trouver le bon entrypoint (lien vers api). FAIT
 
 Creer un path vers ma page results.hmtl.
 
