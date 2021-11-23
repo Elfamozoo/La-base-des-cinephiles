@@ -1,5 +1,11 @@
 const form = document.getElementById('form');
-const query = "dragon ball z";
+const query = getQueryFromSearch();
+
+// Je crée une fonction qui decompose mon url avec URLSearchParams et qui attribue search a ma variable query.
+function getQueryFromSearch() {
+    console.log(window.location.search)
+    return new URLSearchParams(window.location.search).get('search');
+}
 
 function resultsBackdrop_path(movies, movieBackdropCount) {
     const results = [];
@@ -48,4 +54,3 @@ fetch(search_url + new URLSearchParams({
 
 
     });
-    
