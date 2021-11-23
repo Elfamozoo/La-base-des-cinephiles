@@ -8,7 +8,11 @@ fetch(search_url + new URLSearchParams({
     page: 1,
     include_adult: true,
 }));
-
+    .then(res => res.json())
+    .then(searchResult => {
+        console.log(searchResult);
+        searchCategory(searchResult)
+    })
 
 
 
@@ -22,4 +26,3 @@ fetch(search_url + new URLSearchParams({
 //     }
 
 // });
-
