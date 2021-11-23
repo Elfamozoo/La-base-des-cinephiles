@@ -10,9 +10,40 @@ fetch(search_url + new URLSearchParams({
 }))
     .then(res => res.json())
     .then(searchResult => {
-        console.log(searchResult);
-        searchCategory(searchResult)
+        // console.log(searchResult);
+        // searchCategory(searchResult)
+        let resultatContainer = document.querySelector('.resultats-container');
+        for (let i = 0; i < 20; i++) {
+            if (searchResult.results[i].backdrop_path == null) {
+                i++;
+            }
+            resultatContainer.innerHTML += `
+                    <div class="film" onclick="location.href = '/${searchResult.results[i].id}'">
+                    <img src="${img_url}${searchResult.results[i].backdrop_path}" alt="">
+                    <p class="film-titre">${searchResult.results[i].title}</p>
+            
+            `
+        }
     })
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
