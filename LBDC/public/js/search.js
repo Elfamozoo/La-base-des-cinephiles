@@ -1,57 +1,51 @@
 const form = document.getElementById('form');
-const query = "dbz";
+const query = "dragon ball z";
+
+function resultsBackdrop_path(movies, movieBackdropCount) {
+    const results = [];
+    let i = 0;
+
+    // Tant que results n'a pas atteint movieBackdropCount je continue a parcourir la liste de mes films(movies).
+    // Le i < movies.length-1 sert a eviter les boucles au cas ou la liste de films est moins elevé que movieBackdropCount.
+    while (results.length < movieBackdropCount && i < movies.length - 1) {
+        // Je créé la variable movie (qui deviendra un objet par la suite)
+        // et je lui assigne mon argument movies[i] ( qui est un tableau ) le [i] me sert a parcourir mon tableau et a l'incrementer.
+        // movie correspond a l'element dans mon tableau movies ciblé par i.
+        const movie = movies[i];
+        // Si mes films possede une image je continue d'incrementer.
+        if (movie.backdrop_path !== null) {
+            // Je push les films recupérés dans mon tableau results.
+            results.push(movie);
+        }
+        // J'incremente mon i par rapport au nombre de films recup
+        i++;
+    }
+    // Je renvoi mon tableau results.
+    return results;
+
+}
+
 
 fetch(search_url + new URLSearchParams({
-    api_key: api_key,
-    language: langue,
-    query: query,
-    page: 1,
-    include_adult: true,
-}))
+        api_key: api_key,
+        language: langue,
+        query: query,
+        page: 1,
+        include_adult: true,
+    }))
     .then(res => res.json())
     .then(searchResult => {
-        let resultatContainer = document.querySelector('.resultats-container');
-        for (let i = 0; i < 20; i++) {
-            if (searchResult.results[i].backdrop_path == null) {
-                i++;
-            }
-            resultatContainer.innerHTML += `
-                    <div class="film" onclick="location.href = '/${searchResult.results[i].id}'">
-                    <img src="${img_url}${searchResult.results[i].backdrop_path}" alt="">
-                    <p class="film-titre">${searchResult.results[i].title}</p>
+        const resultatContainer = document.querySelector('.resultats-container');
+        resultsBackdrop_path(searchResult.results, 20)
+            .forEach(movie => {
+                resultatContainer.innerHTML += `
+                    <div class="film" onclick="location.href = '/${movie.id}'">
+                    <img src="${img_url}${movie.backdrop_path}" alt="">
+                    <p class="film-titre">${movie.title}</p>
             
             `
-        }
-    })
+            });
 
 
-
-
+    });
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault()
-
-//     const searchTerm = search.value;
-
-//     if (searchTerm) {
-//         setupMovieInfo(search_url+'&query='+searchTerm)
-//     }
-
-// });
