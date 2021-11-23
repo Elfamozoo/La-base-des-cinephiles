@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const query = "";
+const query = "Eternals";
 
 fetch(search_url + new URLSearchParams({
     api_key: api_key,
