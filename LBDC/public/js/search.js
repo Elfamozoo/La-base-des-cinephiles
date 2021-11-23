@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const query = "Eternals";
+const query = "dbz";
 
 fetch(search_url + new URLSearchParams({
     api_key: api_key,
@@ -10,8 +10,6 @@ fetch(search_url + new URLSearchParams({
 }))
     .then(res => res.json())
     .then(searchResult => {
-        // console.log(searchResult);
-        // searchCategory(searchResult)
         let resultatContainer = document.querySelector('.resultats-container');
         for (let i = 0; i < 20; i++) {
             if (searchResult.results[i].backdrop_path == null) {
