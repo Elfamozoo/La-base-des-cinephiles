@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require ('path')
-var mysql = require('mysql');
-var session = require('express-session');
-var bodyParser = require('body-parser');
+const mysql = require('mysql');
+const session = require('express-session');
+const bodyParser = require('body-parser');
 
 let initial_path = path.join(__dirname, "public")
 
@@ -35,12 +35,6 @@ app.listen(3000, ()=> {
 
 
 
-var mysql = require('mysql');
-var express = require('express');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var path = require('path');
-
 var connection = mysql.createConnection({
 	host     : 'localhost',
 	user     : 'root',
@@ -48,7 +42,6 @@ var connection = mysql.createConnection({
 	database : 'nodelogin'
 });
 
-var app = express();
 app.use(session({
 	secret: 'secret',
 	resave: true,
@@ -90,4 +83,4 @@ app.get('/home', function(request, response) {
 	response.end();
 });
 
-app.listen(3000);
+app.listen(3001);
