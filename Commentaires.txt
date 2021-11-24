@@ -33,3 +33,12 @@ Pour la traduction :
 
 Je veux un button en haut a gauche de mon site ( sur la page principal ) qui me permets de changer de langue le site.
 En utilisant l'api de TMDB je pense que cela est possible mais pas evident. FAIT
+
+
+Faire un login/Inscription :
+
+Comment faire ? :
+
+Faire des buttons login/signup. FAIT
+
+Je suis ce tuto afin de faire mon login avec nodeJS https://codeshack.io/basic-login-system-nodejs-express-mysql/

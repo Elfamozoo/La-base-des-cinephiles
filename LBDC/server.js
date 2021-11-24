@@ -16,6 +16,9 @@ app.get('/:id', (req, res) => {
     res.sendFile(path.join(initial_path, "about.html"));
 })
 
+app.get('/', function(req, response) {
+	response.sendFile(path.join(__dirname + '/login.html'));
+});
 
 // Renvoi une erreur 404 si la route est invalide.
 app.use((req, res) => {

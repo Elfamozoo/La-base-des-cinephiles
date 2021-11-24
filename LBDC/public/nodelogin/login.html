@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>La base des cinéphiles</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ebdd2dcdf7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/api.js" defer></script>
+    <script src="../js/scroll.js" defer></script>
+    <script src="../js/langue.js" defer></script>
+    <script src="../js/search.js" defer></script>
+    <script src="../js/home.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="img/cinephiles.png" class="logo" alt="">
+        <div class="join-box">
+            <div class="search-container">
+                <form id="form" action="results.html">
+                    <input type="text" class="search-text" placeholder="Rechercher" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="lang-menu">
+                <button class="click">Langue</button>
+                <div class="list-lang">
+                    <button onclick="language('fr-FR')" class="links">French</button>
+                    <button onclick="language('en-US')" class="links">English</button>
+                    <button onclick="language('de-DE')" class="links">German</button>
+                    <button onclick="language('ar-SA')" class="links">Arabic</button>
+                </div>
+            </div>
+            <p class="join-msg">Profitez de resumés complets de vos films et series</p>
+            <button class="btn join-btn">Rejoignez nous !</button>
+            <button class="btn">Connectez vous !</button>
+        </div>
+    </nav>
+    </head>
+
+    <body>
+        <div class="login-form">
+            <h1>Login Form</h1>
+            <form action="auth" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit">
+            </form>
+        </div>
+
+
+
+
+
+
+    </body>
+
+</html>
