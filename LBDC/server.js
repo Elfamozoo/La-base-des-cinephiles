@@ -15,13 +15,13 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(initial_path, "index.html"));
 })
 
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(initial_path, 'login.html'));
+});
 app.get('/:id', (req, res) => {
     res.sendFile(path.join(initial_path, "about.html"));
 })
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(initial_path, 'login.html'));
-});
 
 // Renvoi une erreur 404 si la route est invalide.
 app.use((req, res) => {
