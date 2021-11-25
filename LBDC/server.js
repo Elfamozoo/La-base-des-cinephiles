@@ -20,7 +20,7 @@ app.get('/:id', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname + 'login.html'));
+    res.sendFile(path.join(initial_path, 'login.html'));
 });
 
 // Renvoi une erreur 404 si la route est invalide.
@@ -42,7 +42,7 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(bodyParser.urlencoded({
-    extended: true
+    extended: false
 }));
 app.use(bodyParser.json());
 
@@ -67,7 +67,7 @@ app.post('/login', (req, res) => {
     }
 });
 
-app.get('/', function (req, res) {
+app.get('/login', (req, res) => {
     if (req.session.loggedin) {
         res.send('Bienvenue, ' + req.session.username + '!');
     } else {
