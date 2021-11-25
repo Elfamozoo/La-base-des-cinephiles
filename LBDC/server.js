@@ -19,8 +19,8 @@ app.get('/:id', (req, res) => {
     res.sendFile(path.join(initial_path, "about.html"));
 })
 
-app.get('/', function (req, response) {
-    response.sendFile(path.join(__dirname + '/login.html'));
+app.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname + '/login.html'));
 });
 
 // Renvoi une erreur 404 si la route est invalide.
@@ -47,33 +47,33 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
-app.post('/auth', function (request, response) {
-    var username = request.body.username;
-    var password = request.body.password;
+app.post('/login', (req, res ) => {
+    var username = req.body.username;
+    var password = req.body.password;
     if (username && password) {
         connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function (error, results, fields) {
             if (results.length > 0) {
-                request.session.loggedin = true;
-                request.session.username = username;
-                response.redirect('/');
+                req.session.loggedin = true;
+                req.session.username = username;
+                res.redirect('/');
             } else {
-                response.send("L'username et/ou le mot de passe est incorrect !");
+                res.send("L'username et/ou le mot de passe est incorrect !");
             }
-            response.end();
+            res.end();
         });
     } else {
-        response.send('Rentrez un username et un mot de passe !');
-        response.end();
+        res.send('Rentrez un username et un mot de passe !');
+        res.end();
     }
 });
 
-app.get('/', function (request, response) {
-    if (request.session.loggedin) {
-        response.send('Bienvenue, ' + request.session.username + '!');
+app.get('/', function (req, res) {
+    if (req.session.loggedin) {
+        res.send('Bienvenue, ' + req.session.username + '!');
     } else {
-        response.send("S'il vous plait connectez pour voir cette page !");
+        res.send("S'il vous plait connectez pour voir cette page !");
     }
-    response.end();
+    res.end();
 });
 
 
