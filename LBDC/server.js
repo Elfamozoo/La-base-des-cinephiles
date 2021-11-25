@@ -29,7 +29,7 @@ app.use((req, res) => {
 })
 
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
@@ -68,7 +68,7 @@ app.post('/login', (req, res) => {
     }
 });
 
-app.get('/login', (req, res) => {
+app.get('/', (req, res) => {
     if (req.session.loggedin) {
         res.send('Bienvenue, ' + req.session.username + '!');
     } else {
@@ -76,7 +76,6 @@ app.get('/login', (req, res) => {
     }
     res.end();
 });
-
 
 
 app.listen(3000, () => {
