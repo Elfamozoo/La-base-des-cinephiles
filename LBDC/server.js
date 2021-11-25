@@ -19,8 +19,8 @@ app.get('/:id', (req, res) => {
     res.sendFile(path.join(initial_path, "about.html"));
 })
 
-app.get('/login', function (req, res) {
-    res.sendFile(path.join(__dirname + '/login.html'));
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname + 'login.html'));
 });
 
 // Renvoi une erreur 404 si la route est invalide.
@@ -47,7 +47,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
-app.post('/login', (req, res ) => {
+app.post('/login', (req, res) => {
     var username = req.body.username;
     var password = req.body.password;
     if (username && password) {
