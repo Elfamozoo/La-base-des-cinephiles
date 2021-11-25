@@ -18,10 +18,10 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(path.join(initial_path, 'login.html'));
 });
+
 app.get('/:id', (req, res) => {
     res.sendFile(path.join(initial_path, "about.html"));
 })
-
 
 // Renvoi une erreur 404 si la route est invalide.
 app.use((req, res) => {
@@ -40,7 +40,9 @@ app.use(session({
     secret: 'keyboard cat',
     resave: true,
     saveUninitialized: true,
-    cookie: { secure: true }
+    cookie: {
+        secure: true
+    }
 }));
 app.use(bodyParser.urlencoded({
     extended: false
