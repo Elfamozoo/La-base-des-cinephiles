@@ -43,3 +43,6 @@ Faire des buttons login/signup. FAIT
 
 Je suis ce tuto afin de faire mon login avec nodeJS https://codeshack.io/basic-login-system-nodejs-express-mysql/.
 https://heynode.com/tutorial/process-user-login-form-expressjs/
+
+
+Faire en sorte de monter que l'utilisateur est bien connecté ( logo profil ou message de bienvenue sur la page d'accueil)
