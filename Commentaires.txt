@@ -46,3 +46,9 @@ https://heynode.com/tutorial/process-user-login-form-expressjs/
 
 
 Faire en sorte de monter que l'utilisateur est bien connecté ( logo profil ou message de bienvenue sur la page d'accueil)
+
+
+Creer un boutton de deconnection lorsque connecté (et faire en sorte quil ne soit visible que lorsque connecté).
+https://stackoverflow.com/questions/27978868/destroy-cookie-nodejs
+https://stackoverflow.com/questions/53016730/if-website-user-is-logged-in-then-make-object-visible-if-logged-out-then-inv
+
