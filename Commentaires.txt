@@ -50,5 +50,15 @@ Faire en sorte de monter que l'utilisateur est bien connecté ( logo profil ou m
 
 Creer un boutton de deconnection lorsque connecté (et faire en sorte quil ne soit visible que lorsque connecté).
 https://stackoverflow.com/questions/27978868/destroy-cookie-nodejs
+https://stackoverflow.com/questions/70101660/how-to-destroy-session
 https://stackoverflow.com/questions/53016730/if-website-user-is-logged-in-then-make-object-visible-if-logged-out-then-inv
+https://stackoverflow.com/questions/69551492/hide-navbar-elements-and-bring-up-the-logout-button-with-ejs
 
+
+
+Rendre le site responsive lorsque que tout sera terminé.
+https://stackoverflow.com/questions/1776915/how-can-i-center-an-absolutely-positioned-element-in-a-div
+https://kinsta.com/fr/blog/design-web-responsive/
+https://www.browserstack.com/guide/how-to-create-responsive-website
+https://torquemag.io/2021/08/media-queries-guide/
+https://hackernoon.com/8-responsive-web-design-best-practices-to-know-in-2021-p38x33p1
