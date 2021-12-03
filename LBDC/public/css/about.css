@@ -107,17 +107,25 @@ iframe {
 /* Media Queries */
 
 
+/* Smartphone classique  */
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (max-width: 380px) {}
 
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+/* Smartphone Phablette  */
+
+@media (max-width: 576px) {}
+
+
+/* Tablette  */
+
+@media (max-width: 768px) {}
+
+
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (max-width: 992px) {}
 
 
 /* X-Large devices (large desktops, 1200px and up) */
