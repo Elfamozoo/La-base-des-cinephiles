@@ -1,7 +1,13 @@
+
+html {
+    font-size: 62.5%;
+    /* 10px browser default */
+}
+
 .film-info {
     width: 100%;
     height: calc(100vh - 60px);
-    margin-top: 60px;
+    margin-top: 6rem;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -19,27 +25,36 @@
 }
 
 .film-nom {
-    font-size: 30px;
+    font-size: 5rem;
     font-weight: 500;
 }
 
 .genre {
     opacity: 0.6;
-    margin: 30px 0;
+    font-size: 1.6rem;
 }
 
 .note {
     opacity: 0.6;
-    margin: 10px 0;
+    margin: 2rem 0;
+    font-size: 1.6rem;
+
 }
 
 
 .description {
     width: 70%;
-    line-height: 20px;
-    margin-bottom: 30px;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+
 }
 
+
+.casting {
+    font-size: 1.6rem;
+
+}
 .casting span {
     opacity: 0.6;
 }
@@ -52,15 +67,15 @@
 
 
 .heading {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 
 iframe {
-    width: 400px;
-    height: 200px;
+    width: 40rem;
+    height: 20rem;
 }
 
 
@@ -74,10 +89,10 @@ iframe {
 
 .film p {
     position: absolute;
-    bottom: 30px;
+    bottom: 3rem;
     width: 100%;
-    height: 30px;
-    line-height: 30px;
+    height: 3rem;
+    line-height: 3rem;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
     opacity: 0;
