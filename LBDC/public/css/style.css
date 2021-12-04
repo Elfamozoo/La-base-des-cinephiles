@@ -46,7 +46,7 @@ body {
 .join-box {
     width: fit-content;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: auto;
     margin-left: auto;
@@ -80,7 +80,7 @@ body {
 /* Selection langue  */
 
 .lang-menu {
-    width: 150px;
+    width: 15rem;
     /* position: relative; */
 }
 
@@ -259,7 +259,7 @@ body {
 }
 
 
-.fas {
+.fa-times {
     color: red;
 }
 
@@ -326,8 +326,43 @@ body {
 
 /* Smartphone classique  */
 
-@media (max-width: 380px) {}
+@media (max-width: 380px) {
+    .search-text {
+        font-size: 1rem;
+    }
 
+    .search-container {
+        padding-right: 0;
+    }
+
+    .search-container button {
+        font-size: 1em;
+        margin-top: -2.4rem;
+        margin-left: 8rem;
+        margin-right: 11.8rem;
+    }
+
+    .lang-menu {
+        width: 1rem;
+    }
+
+    .click {
+        margin-left: -10rem;
+    }
+
+    .join-msg {
+        display: none;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .btn {
+        margin-left: 0;
+    }
+
+}
 
 /* Smartphone Phablette  */
 
